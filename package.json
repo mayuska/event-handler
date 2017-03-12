@@ -1,0 +1,25 @@
+{
+  "name": "event-handler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mayuska/event-handler.git"
+  },
+  "keywords": [
+    "event-handler",
+    "events",
+    "event-listeners",
+    "listeners"
+  ],
+  "author": "Maja Radošević",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayuska/event-handler/issues"
+  },
+  "homepage": "https://github.com/mayuska/event-handler#readme"
+}
