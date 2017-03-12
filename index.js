@@ -79,8 +79,7 @@ var eventHandler = function(){
      */
     this.suspend = function (eventName){
         if(this.isActive(eventName)){
-            suspendedEvents[eventName] = [];
-            suspendedEvents[eventName].push(events[eventName]);
+            suspendedEvents[eventName] = events[eventName];
             delete events[eventName];
 
             return true;
@@ -94,8 +93,7 @@ var eventHandler = function(){
      */
     this.unsuspend = function (eventName){
         if(this.isSuspended(eventName)){
-            events[eventName] = [];
-            events[eventName].push(suspendedEvents[eventName]);
+            events[eventName] = suspendedEvents[eventName];
             delete suspendedEvents[eventName];
 
             return true;
@@ -120,7 +118,7 @@ var eventHandler = function(){
 
             var name = eventName[j];
 
-            if(!this.isRegistered(name)){
+            if(!this.isActive(name)){
                 continue;
             }
 
