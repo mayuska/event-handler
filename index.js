@@ -29,11 +29,13 @@ var eventHandler = function(){
             }
 
             events[name].push(callback);
+            return this;
         }
     };
 
     /**
-     * @param {string} eventName
+     * @param  {string} eventName
+     * @returns {boolean}
      */
     this.isRegistered = function(eventName){
         return this.isActive(eventName) || this.isSuspended(eventName);
@@ -127,7 +129,7 @@ var eventHandler = function(){
                 callback.apply(null, data);
             }
         }
-
+        return this;
     }
 };
 
