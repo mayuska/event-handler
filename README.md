@@ -1,7 +1,9 @@
-## Simple event handler:
-Event handler that allows you to add listeners and fire events in simple manner. Any given event can be suspended from firing and also can be resuspended. 
-Also you can remove any given event no matter if it's suspended or active. 
-This library is environment agnostic so it can be used in nodeJS and browser environment.
+## Simple event handler
+- Event handler that allows you to add listeners and fire events in simple manner. 
+- You can register as many functions to one event as you want.
+- Any given event can be suspended from firing and also can be resuspended. 
+- Also you can remove any given event no matter if it's suspended or active. 
+- This library is environment agnostic so it can be used in nodeJS and browser environment.
 
 ### Developed with:
 - Vanilla js
@@ -19,8 +21,17 @@ npm install mayuska/event-handler
 var eventHandler = require('event-handler');
 var event = new eventHandler();
 
+
+    /**
+     * @param {string|array} eventName
+     * @param {function} callback
+     */
 event.on(eventName, callback);  // create event
 
+ /**
+     * @param {string|array} eventName
+     * @param {object|array|string|int|float} data
+     */
 event.fire(eventName, data); // dispatch event
 ```
 
@@ -87,5 +98,8 @@ console.log('(removed) isActive ', event.isActive('test'));
 console.log('(removed) isSuspended ', event.isSuspended('test'));
 console.log('(removed) isRegistered ', event.isRegistered('test'));
 ```
+
+firing multiple events at the same time
+
 
 
