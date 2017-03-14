@@ -1,8 +1,8 @@
 ## Simple event handler
 - Event handler that allows you to add listeners and fire events in simple manner. 
-- You can register as many functions to one event as you want.
+- To one event you can register as many functions as you want.
 - Any given event can be suspended from firing and also can be reactivate. 
-- Also you can remove any given event no matter if it's suspended or active. 
+- Also any given event can be removed no matter if it's suspended or active. 
 - This library is environment agnostic so it can be used in nodeJS and browser environment.
 
 ### Developed with:
@@ -41,10 +41,10 @@ event.fire(eventName, data); // dispatch event
 
 Method | Description 
 --- | ---  
-**.on**(eventName, callback)    | Creates and adds events. Adds callback to event, you can provide multiple event names as array of strings. It returns events object.
-**.fire**(eventName, data)		|Runs all registered callbacks for provided eventName if that event name is not suspended. Every callback will get data as parameters. It returns events object.
+**.on**(eventName, callback)    | Creates and adds events. Adds callback to event. You can provide multiple event names as array of strings.It returns events object.
+**.fire**(eventName, data)		| Runs all registered callbacks for provided eventName, if that event name is not suspended. Every callback will get data as parameters. It returns events object.
 **.suspend**(eventName)         | Suspends event from being fired. Returns true for successful suspend, false otherwise.
-**.unsuspend**(eventName)       | Unsuspend previously suspended event. Returns true on success, false otherwise.
+**.unsuspend**(eventName)       | Reactivates previously suspended event. Returns true on success, false otherwise.
 **.remove**(eventName)          | Removes previously added event, no matter if it's suspended or not. Returns true on success, false otherwise.
 **.isActive**(eventName)        | Checks is event exists and is active event. Returns true on success, false otherwise.
 **.isSuspended**(eventName)     | Checks if event is suspended event. Returns true on success, false otherwise.
@@ -98,8 +98,6 @@ console.log('(removed) isActive ', event.isActive('test'));
 console.log('(removed) isSuspended ', event.isSuspended('test'));
 console.log('(removed) isRegistered ', event.isRegistered('test'));
 ```
-
-firing multiple events at the same time
 
 
 
