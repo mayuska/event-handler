@@ -1,7 +1,7 @@
 ## Simple event handler
 - Event handler that allows you to add listeners and fire events in simple manner. 
 - You can register as many functions to one event as you want.
-- Any given event can be suspended from firing and also can be resuspended. 
+- Any given event can be suspended from firing and also can be reactivate. 
 - Also you can remove any given event no matter if it's suspended or active. 
 - This library is environment agnostic so it can be used in nodeJS and browser environment.
 
